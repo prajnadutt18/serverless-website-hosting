@@ -1,0 +1,22 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "dynamodb:Scan",
+                "dynamodb:PutItem"
+            ],
+            "Resource": "arn:aws:dynamodb:eu-central-1:YOUR_ACCOUNT_ID:table/employeeProfile"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "logs:CreateLogGroup",
+                "logs:CreateLogStream",
+                "logs:PutLogEvents"
+            ],
+            "Resource": "arn:aws:logs:eu-central-1:YOUR_ACCOUNT_ID:log-group:/aws/lambda/YOUR_LAMBDA_FUNCTION_NAME:*"
+        }
+    ]
+}
